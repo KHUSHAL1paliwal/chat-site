@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Chat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header>
+      <h1>Private Chat</h1>
+      <button id="backBtn"  class="btn danger"><a href="chat.html">Back</a></button>
+    </header>
+    <div id="privateChatBody" class="chat-body"></div>
+    <form id="privateChatForm" class="form chat-form">
+      <input type="text" id="privateChatInput" placeholder="Type your message..." required>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="private-script.js"></script>
+</body>
+</html>

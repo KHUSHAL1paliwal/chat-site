@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Chat</title>
+  <!-- Link to the styles.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <header>
+      <h1>Chat with Strangers</h1>
+      <button id="logoutBtn" class="btn danger"><a href= "index.html" >Logout</a></button>
+    </header>
+    <div id="chatBody" class="chat-body"></div>
+    <form id="chatForm" class="form chat-form">
+      <input type="text" id="chatInput" placeholder="Type your message..." required>
+      <input type="file" id="photoInput" style="display: none;">
+      <button type="button" id="photoButton" class="btn">📷</button>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <div class="private-chat">
+      <input type="text" id="privateUsername" placeholder="Enter username for private chat">
+      <button id="privateChatBtn" class="btn"><a href="private-chat.html" >Start Private Chat</a></button>
+    </div>
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
