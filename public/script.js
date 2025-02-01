@@ -116,16 +116,18 @@ socket.on('receive-message', (data) => {
   const messageContainer = document.createElement('div');
   messageContainer.classList.add(sender === username ? 'sent' : 'received');
 
-  const nameElement = document.createElement('span');
-  nameElement.classList.add(sender === username ? 'sent-name' : 'received-name');
-  nameElement.textContent = sender;
+  const formattedMessage = `${sender}: ${message}`;
 
-  messageContainer.appendChild(nameElement);
+  const messageElement = document.createElement('span');
+  messageElement.textContent = formattedMessage;
+
+  messageContainer.appendChild(messageElement);
+
+
 
   if (message) {
     const messageElement = document.createElement('span');
-    messageElement.textContent = message;
-    messageContainer.appendChild(messageElement);
+    
   }
 
   if (photo) {
