@@ -115,20 +115,14 @@ socket.on('receive-message', (data) => {
 
   const messageContainer = document.createElement('div');
   messageContainer.classList.add(sender === username ? 'sent' : 'received');
+  const nameElement = document.createElement('strong');
+    nameElement.textContent = sender + ": "; // Bold sender name with a colon
 
-  const formattedMessage = `${sender}: ${message}`;
-
-  const messageElement = document.createElement('span');
-  messageElement.textContent = formattedMessage;
-
-  messageContainer.appendChild(messageElement);
-
-
-
-  if (message) {
     const messageElement = document.createElement('span');
-    
-  }
+    messageElement.textContent = message;
+ 
+  messageContainer.appendChild(nameElement);
+  messageContainer.appendChild(messageElement);
 
   if (photo) {
     const photoElement = document.createElement('img');
